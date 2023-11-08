@@ -1,0 +1,61 @@
+/* body{
+    transform: scale(0.5, 0.5);
+} */
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+    margin: 0;
+    flex-wrap:wrap;
+    gap: 30px;
+}
+
+img {
+    display: block;
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container{
+    flex: 0 1 40%;
+    width: 40%;
+    border-style:solid;
+}
+button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.hp-bar {
+    border-style: solid;
+    background-color: rgb(26, 182, 26);
+    height: 30px;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.hp-bar > p {
+    margin: auto;
+    font-weight: bold;
+    text-align: center;
+    font-size: 150%;
+}
+
+.log{
+    flex: 0 1 70%;
+}
+
+.log > p {
+    display: block;
+    text-align: center;
+}
+
+.hp-quan-cat, .hp-quan-dog {
+    text-align: center;
+    font-weight: bold;
+}

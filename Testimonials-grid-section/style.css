@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+body {
+    background-color: hsl(210, 46%, 95%);
+}
+
+.attribution {
+    font-size: 11px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+
+.grid {
+    display: grid;
+    grid-template-rows: auto;
+    margin: 72px 24px;
+    font-family: Barlow Semi Condensed, sans-serif;
+    line-height: 110%;
+    grid-template-columns: 1fr;
+    gap: 30px;
+
+    grid-template-areas:
+    "block1"
+    "block2"
+    "block3"
+    "block4"
+    "block5"
+}
+
+@media screen and (min-width: 1110px) {
+    .grid {
+        margin: auto;
+        min-height: 100vh;
+        max-width: 1110px;
+        grid-auto-rows: minmax(auto, 284px);
+        grid-auto-columns: minmax(auto, 256px);
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 30px;
+        grid-template-areas:
+            "block1 block1 block2 block5"
+            "block3 block4 block4 block5";
+        place-content: center;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width:1109px) {
+    .grid {
+        margin: 72px auto;
+        min-height: 100vh;
+        max-width: 768px;
+        grid-auto-rows: auto;
+        grid-auto-columns: minmax(auto, 256px);
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+        grid-template-areas:
+            "block1 block1 block2"
+            "block3 block4 block4"
+            "block5 block5 block5 ";
+        place-content: center;
+    }
+}
+
+div:nth-child(1) {
+    grid-area: block1;
+    background-color: hsl(263, 55%, 52%);
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: right 80px top;
+    background-size: 100px;
+    color: hsl(210, 46%, 95%);
+}
+
+div:nth-child(2) {
+    grid-area: block2;
+    background-color: hsl(217, 19%, 35%);
+    color: hsl(210, 46%, 95%);
+}
+
+div:nth-child(3) {
+    grid-area: block3;
+    background-color: white;
+    color: hsl(217, 19%, 35%);
+}
+
+div:nth-child(4) {
+    grid-area: block4;
+    background-color: hsl(219, 29%, 14%);
+    color: hsl(210, 46%, 95%);
+}
+
+div:nth-child(5) {
+    grid-area: block5;
+    background-color: white;
+    color: hsl(217, 19%, 35%);
+}
+
+img {
+    float: left;
+    border-radius: 50%;
+    margin-right: 15px;
+    height: 28px;
+    margin-top: 4px;
+    transition: all 0.8s cubic-bezier(.34,1.56,.71,1.37);
+}
+
+img:hover{
+    transform: scale(1.5);
+}
+
+.grid div {
+    border-radius: 8px;
+    padding: 30px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s;
+}
+
+.grid div:hover{
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
+}
+
+div p {
+    font-size: 13px;
+    opacity: 50%;
+    margin-bottom: 0;
+}
+
+div h1 {
+    font-size: 22px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    line-height: 135%;
+}
+
+span:first-child{
+    line-height: 70%;
+}
+
+br+span{
+    opacity: 50%;
+    font-size: 85%;
+}
